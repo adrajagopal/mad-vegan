@@ -1,0 +1,158 @@
+body {
+	-webkit-font-smoothing: antialiased; /* because Brian said to */
+	& ::selection {
+		background: var(--highlight);
+	}
+}
+
+/*Type patterns*/
+
+.xxl-voice {
+	font-family: var(--primary-font);
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.xl-voice {
+	font-family: var(--primary-font);
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.large-voice {
+	font-family: var(--primary-font);
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.medium-voice {
+	font-family: var(--secondary-font);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.small-voice {
+	font-family: var(--secondary-font);
+	font-size: 0.75rem;
+	font-weight: 400;
+}
+
+article {
+	& p + p {
+		margin-top: 1em;
+	}
+
+	& h2 + p {
+		margin-top: 20px;
+	}
+
+	& code {
+		font-family: monospace;
+		font-size: 1.1em;
+		color: green;
+	}
+}
+
+p,
+li {
+	max-width: 70ch;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 600;
+}
+
+p,
+ul,
+ol,
+li,
+legend,
+label,
+.medium-voice {
+	font-family: var(--secondary-font);
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--ink);
+	line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--ink);
+	font-family: var(--primary-font);
+}
+
+figcaption {
+	color: var(--ink);
+	font-style: italic;
+}
+
+a,
+p a {
+	color: var(--ink);
+	text-decoration: underline;
+	font-family: var(--secondary-font);
+}
+
+@media (prefers-color-scheme: dark) {
+	a:not(header a, .site-footer a),
+	p a {
+		color: var(--ink);
+		text-decoration: underline;
+	}
+}
+
+/*margin & padding*/
+text-content {
+	& h1 + :is(p, ul) {
+		margin-top: 1rem;
+	}
+
+	& :is(h2, h3) + :is(p, ul) {
+		margin-top: 0.75rem;
+	}
+
+	& p + p {
+		margin-top: 1rem;
+	}
+}
+
+article {
+	& h1,
+	h2,
+	h3 {
+		margin-top: 1.25rem;
+	}
+
+	& h1 + h2,
+	h1 + p,
+	h2 + h3 {
+		margin-top: 2rem;
+	}
+
+	& h2 + p {
+		margin-top: 1.5rem;
+	}
+
+	& h3 + p {
+		margin-top: 1rem;
+	}
+
+	& p + p {
+		margin-top: 1rem;
+	}
+
+	& img + p {
+		margin-top: 0.75rem;
+	}
+
+	& figcaption {
+		margin-top: 0.5rem;
+	}
+}

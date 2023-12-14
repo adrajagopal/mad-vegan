@@ -1,0 +1,22 @@
+button {
+	max-width: 150px;
+	background-color: var(--color);
+	color: white;
+	font-size: 16px;
+	padding: 8px;
+	border: 0;
+
+	&:active {
+		background-color: var(--color-dark);
+	}
+
+	cursor: pointer;
+
+	&.warning {
+		background-color: var(--warning);
+
+		&:active {
+			background-color: var(--warning-dark);
+		}
+	}
+}
