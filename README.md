@@ -72,4 +72,24 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## LeafletJS
+
+Make sure you're using the right dependency for leaflet there's a nuxt2 and a nuxt3 one. I used the nuxt3 one.
+
+Here are the relevant docs:
+
+
+```bash
+# LeafletJS docs
+https://leafletjs.com/
+
+# Nuxt3
+https://nuxt.com/modules/nuxt3-leaflet
+
+# vue-leaflet github - contains component playgrounds
+
+https://github.com/vue-leaflet/vue-leaflet/tree/master/src/playground/views
+
+
+```
