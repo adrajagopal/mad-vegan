@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    Page: foo
+    <h1 class="xxl-voice">About page</h1>
   </div>
 </template>
 
