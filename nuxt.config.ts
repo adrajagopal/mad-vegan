@@ -13,6 +13,17 @@ export default defineNuxtConfig({
         }
     }],
     'nuxt3-leaflet',
-  ],
+    '@nuxtjs/supabase',
+	],
 	css: ['~/assets/css/site.css'],
+	vue: {
+	   compilerOptions: {
+	      isCustomElement: function(tag) {
+	         return [
+	            'inner-column', 
+	            'text-content'
+	         ].includes(tag);
+	      },
+	   },
+	},
 })
