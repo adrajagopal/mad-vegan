@@ -48,4 +48,12 @@ form {
 		border: none;
 		border-radius: var(--corners);
 	}
+
+	& .success {
+		color: green;
+	}
+
+	& .error {
+		color: red;
+	}
 }

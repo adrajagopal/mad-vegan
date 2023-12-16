@@ -31,6 +31,7 @@ import SearchBar from "@/components/SearchBar.vue";
 	& nav {
 		display: flex;
 		gap: 10px;
+		align-items: center;
 	}
 }
 
