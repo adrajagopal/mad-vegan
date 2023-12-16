@@ -1,23 +1,25 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import SearchBar from "@/components/SearchBar.vue";
+
 </script>
 <template>
-	<div class="site-header">
-		<picture class="logo">
-			<img alt="VM logo" src="@/assets/logo.svg" />
-		</picture>
-
-		<!-- <div class="wrapper">
-			<nav>
-				<RouterLink to="/">Home</RouterLink>
-				<RouterLink to="/add-restaurant">Add restaurant</RouterLink>
-			</nav>
-		</div> -->
-
-		<div class="wrapper">
-			<SearchBar />
 	<inner-column>
+		<div class="site-header">
+			<picture class="logo">
+				<img alt="VM logo" src="@/assets/logo.svg" />
+			</picture>
+		
+			<div class="wrapper" >
+				<nav>
+					<RouterLink to="/">Home</RouterLink>
+					<RouterLink to="/add-restaurant">Add restaurant</RouterLink>
+					<SignOut/>
+				</nav>
+			</div>
+		
+<!-- 			<div class="wrapper">
+				<SearchBar />
+			</div> -->
 		</div>
 	</inner-column>
 </template>
