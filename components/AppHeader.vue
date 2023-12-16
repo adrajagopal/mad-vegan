@@ -17,8 +17,9 @@ import SearchBar from "@/components/SearchBar.vue";
 
 		<div class="wrapper">
 			<SearchBar />
+	<inner-column>
 		</div>
-	</div>
+	</inner-column>
 </template>
 
 <style scoped>
