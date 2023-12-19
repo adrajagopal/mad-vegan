@@ -38,7 +38,7 @@
 
 <template>
 	<form @submit.prevent="submit()">
-		<div class="field">
+		<div class="question">
 			<label for="email">Email</label>
 			<input
 				id="email"
@@ -48,7 +48,7 @@
 			/>
 		</div>
 
-		<div class="field">
+		<div class="question">
 			<label for="password">Password</label>
 			<input
 				id="password"
