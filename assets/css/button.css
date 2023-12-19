@@ -4,7 +4,8 @@ button {
 	color: white;
 	font-size: 16px;
 	padding: 8px;
-	border: 0;
+	border: none;
+	border-radius: var(--corners);
 
 	&:active {
 		background-color: var(--color-dark);
