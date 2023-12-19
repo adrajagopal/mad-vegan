@@ -5,9 +5,11 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
 	<inner-column>
 		<div class="site-header">
-			<picture class="logo">
-				<img alt="VM logo" src="@/assets/logo.svg" />
-			</picture>
+			<RouterLink to="/">
+				<picture class="logo">
+					<img alt="VM logo" src="@/assets/logo.svg" />
+				</picture>
+			</RouterLink>
 		
 			<div class="wrapper" >
 				<nav>
@@ -17,9 +19,6 @@ import { RouterLink, RouterView } from "vue-router";
 				</nav>
 			</div>
 		
-<!-- 			<div class="wrapper">
-				<SearchBar />
-			</div> -->
 		</div>
 	</inner-column>
 </template>
