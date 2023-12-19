@@ -1,25 +1,13 @@
 <script setup>
 	const supabase = useSupabaseClient();
 	const form = reactive({
-	 email: '',
-	 password: '',
+	 email: 'adrajagopal@gmail.com',
+	 password: 'Bonk123',
 	 successMessage: '',
 	 errorMessage: '',
 	});
 
-	function submit() {
-	 if (form.email && form.password) {
-	   signIn(form);
-	   form.successMessage = '';
-	   form.errorMessage = '';
-	   return navigateTo('/');
-	 } else {
-	   form.errorMessage = "Please enter a valid email address and password";
-	 }
-	}
-
-	async function signIn(form) {
-	 try {
+	async function signIn() {
 		const { data, error } = await supabase.auth.signInWithPassword({
 		  email: form.email,
 		  password: form.password,
@@ -30,10 +18,19 @@
 	     form.errorMessage = error.message;
 	   };
 	   form.successMessage = `Logging you in now!`;
-	 } catch (error) {
-	   form.errorMessage = error.message;
+	}
+
+	async function submit() {
+	 if (form.email && form.password) {
+	   await signIn();
+	   form.successMessage = '';
+	   form.errorMessage = '';
+	   await navigateTo('/');
+	 } else {
+	   form.errorMessage = "Please enter a valid email address and password";
 	 }
 	}
+
 </script>
 
 <template>

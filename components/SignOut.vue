@@ -1,4 +1,7 @@
 <script setup>
+// adrajagopal@gmail.com
+// Bonk123
+
   const supabase = useSupabaseClient();
 
   async function signOut() {
@@ -6,7 +9,11 @@
 
   	if (error) {
   		console.log('signout error!');
+  		return;
   	};
+
+  	console.log('hi');
+  	await navigateTo('/sign-in');
   }
 
 </script>
