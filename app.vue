@@ -1,13 +1,17 @@
 <template>
-  <div>
-    <header>
-    	<inner-column><AppHeader/></inner-column>
-    </header>
-    	<NuxtPage/>
-    <footer>
-    	<inner-column><AppFooter/></inner-column>
-    </footer>
+	<header>
+		<inner-column>
+			<Masthead/>
+		</inner-column>
+	</header>
 
+	<main>
+		<NuxtPage/>
+	</main>
 
-  </div>
+	<footer>
+		<inner-column>
+			<SiteMap/>
+		</inner-column>
+	</footer>
 </template>
