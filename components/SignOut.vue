@@ -12,7 +12,7 @@
   		return;
   	};
 
-  	console.log('hi');
+  	console.log('bye');
   	await navigateTo('/sign-in');
   }
 
