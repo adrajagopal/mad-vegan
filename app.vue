@@ -1,11 +1,11 @@
 <template>
   <div>
     <header>
-    	<AppHeader/>
+    	<inner-column><AppHeader/></inner-column>
     </header>
     	<NuxtPage/>
     <footer>
-    	<AppFooter/>
+    	<inner-column><AppFooter/></inner-column>
     </footer>
 
 
