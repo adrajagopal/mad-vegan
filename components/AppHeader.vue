@@ -4,8 +4,6 @@ const user = useSupabaseUser();
 
 </script>
 <template>
-	<inner-column>
-		<div v-if="user" class="site-header">
 			<RouterLink to="/">
 				<picture class="logo">
 					<img alt="VM logo" src="@/assets/logo.svg" />
@@ -29,10 +27,8 @@ const user = useSupabaseUser();
 					<img alt="VM logo" src="@/assets/logo.svg" />
 				</picture>
 			</RouterLink>
-
 			<RouterLink to="/about">About</RouterLink>
 		</div>
-	</inner-column>
 </template>
 
 <style scoped>
