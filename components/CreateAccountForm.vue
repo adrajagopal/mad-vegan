@@ -35,39 +35,37 @@
 </script>
 
 <template>
-  <inner-column>
-  	<form @submit.prevent="submit()">
-			<div class="question">
-				<label for="email">Email</label>
-				<input
-					id="email"
-					type="email"
-					v-model="form.email"
-					autocomplete="off"
-				/>
-			</div>
+	<form @submit.prevent="submit()">
+		<div class="question">
+			<label for="email">Email</label>
+			<input
+				id="email"
+				type="email"
+				v-model="form.email"
+				autocomplete="off"
+			/>
+		</div>
 
-			<div class="question">
-				<label for="password">Password</label>
-				<input
-					id="password"
-					type="password"
-					v-model="form.password"
-					autocomplete="off"
-				/>
-			</div>
+		<div class="question">
+			<label for="password">Password</label>
+			<input
+				id="password"
+				type="password"
+				v-model="form.password"
+				autocomplete="off"
+			/>
+		</div>
 
-			<button type="submit">Submit</button>
-		</form>
+		<button type="submit">Submit</button>
+	</form>
 
-		<p class="success" v-if="form.successMessage">
-			{{ form.successMessage }}
-		</p>
+	<p class="success" v-if="form.successMessage">
+		{{ form.successMessage }}
+	</p>
 
-		<p class="error" v-if="form.errorMessage">
-			{{ form.errorMessage }}
-		</p>
-  </inner-column>
+	<p class="error" v-if="form.errorMessage">
+		{{ form.errorMessage }}
+	</p>
 </template>
 
 <style></style>
