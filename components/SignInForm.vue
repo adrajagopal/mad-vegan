@@ -8,27 +8,45 @@
 	});
 
 	async function signIn() {
+		form.successMessage = '';
+		form.errorMessage = '';
+
 		const { data, error } = await supabase.auth.signInWithPassword({
 		  email: form.email,
 		  password: form.password,
 		});
 
-	   if (error) {
-	     console.log('signInWithPassword', error);
-	     form.errorMessage = error.message;
-	   };
-	   form.successMessage = `Logging you in now!`;
+		if (error) {
+			switch(error.toString()) {
+				case 'AuthApiError: Invalid login credentials':
+					form.errorMessage = "The email or password you entered was invalid.";
+					break;
+				case 'AuthApiError: Email not confirmed':
+					form.errorMessage = "Please confirm your email before you sign in.";
+					break;
+				default: "An error occurred. Please try again or contact us.";
+			}
+					
+			console.log('signInWithPassword: ', error);
+
+			return form.errorMessage;
+		}
+
+		form.successMessage = "Logging you in now!";
+
 	}
 
 	async function submit() {
-	 if (form.email && form.password) {
-	   await signIn();
-	   form.successMessage = '';
-	   form.errorMessage = '';
-	   await navigateTo('/');
-	 } else {
-	   form.errorMessage = "Please enter a valid email address and password";
-	 }
+		if (form.email && form.password) {
+			await signIn();
+
+			if (form.successMessage) {
+				//show loader
+
+				await delay(3000);
+				await navigateTo('/');
+			}
+		}
 	}
 
 </script>
@@ -66,3 +84,14 @@
 		{{ form.errorMessage }}
 	</p>
 </template>
+
+<style scoped>
+	p.success {
+		color: green;
+	}
+
+	p.error {
+		color: red;
+	}
+</style>
+
