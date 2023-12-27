@@ -4,11 +4,11 @@
 			<Masthead/>
 		</inner-column>
 	</header>
-
+	
 	<main>
 		<NuxtPage/>
 	</main>
-
+	
 	<footer>
 		<inner-column>
 			<SiteMap/>

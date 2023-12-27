@@ -12,7 +12,6 @@
   		return;
   	};
 
-  	console.log('bye');
   	await navigateTo('/sign-in');
   }
 

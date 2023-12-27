@@ -1,8 +1,8 @@
 <script setup>
 	const supabase = useSupabaseClient();
 	const form = reactive({
-	 email: 'adrajagopal@gmail.com',
-	 password: 'Bonk123',
+	 email: '',
+	 password: '',
 	 successMessage: '',
 	 errorMessage: '',
 	});
@@ -43,7 +43,7 @@
 			if (form.successMessage) {
 				//show loader
 
-				await delay(3000);
+				await delay(2000);
 				await navigateTo('/');
 			}
 		}
