@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+	const supabase = useSupabaseClient()
+
+	const { data, error } = await supabase
+		.from('restaurants')
+		.select(`id, name, lat, long`);
+
+</script>
 
 <template>
 	<div id="map" style="height:100vh; width:100vw">
