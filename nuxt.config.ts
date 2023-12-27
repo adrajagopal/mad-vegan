@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     }],
     'nuxt3-leaflet',
     '@nuxtjs/supabase',
+    '@pinia/nuxt',
 	],
 	css: ['~/assets/css/site.css'],
 	vue: {

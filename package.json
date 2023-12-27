@@ -21,6 +21,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "pinia": "^2.1.7",
     "postcss": "^8.4.32",
     "vite": "^5.0.10"
   }
