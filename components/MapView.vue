@@ -28,8 +28,8 @@
 			<ul>
 				<li v-for="place in data">
 					<LMarker :lat-lng="[place.lat, place.long]">
-						<LPopup>{{place.name}}</LPopup>
 						<LIcon :icon-url="iconUrl" :icon-size="iconSize" :icon-anchor="iconAnchor"/>
+						<LPopup><PopUpCard :place="place" :key="place.id"/></LPopup>
 					</LMarker>
 				</li>
 			</ul>
@@ -37,4 +37,19 @@
 	</div>
 </template>
 
-<style scoped></style>
+<style>
+	.leaflet-popup-pane, .leaflet-popup-pane * {
+		max-width: unset;
+	}
+
+	.leaflet-popup-content-wrapper {
+		border-radius: var(--corners);
+		padding: 8px;
+		background-color: var(--paper);
+	}
+
+	.leaflet-popup-tip {
+		background-color: var(--paper);
+	}
+
+</style>
