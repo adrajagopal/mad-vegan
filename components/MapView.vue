@@ -22,7 +22,9 @@
 			/>
 			<ul>
 				<li v-for="place in data">
-					<LMarker :lat-lng="[place.lat, place.long]"></LMarker>
+					<LMarker :lat-lng="[place.lat, place.long]">
+						<LPopup>{{place.name}}</LPopup>
+					</LMarker>
 				</li>
 			</ul>
 		</LMap>
