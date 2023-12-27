@@ -5,10 +5,12 @@
 		.from('restaurants')
 		.select(`id, name, lat, long, website, cuisine, has_vegan_menu, is_completely_vegan`);
 
-
 	let iconUrl = "https://ucxtdreexegztsldmyjv.supabase.co/storage/v1/object/public/media-library/pindrop-green-dark-gradient.svg?t=2023-12-27T04%3A36%3A59.120Z";
-	let iconSize = [34, 41];
-	let iconAnchor = [17, 41];
+	
+	const iconWidth = 34;
+	const iconHeight = 41;
+	let iconSize = [iconWidth, iconHeight];
+	let iconAnchor = [0.5*iconWidth, iconHeight];
 
 </script>
 
