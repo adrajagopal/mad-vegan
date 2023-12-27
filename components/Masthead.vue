@@ -1,11 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-const user = useSupabaseUser();
+const user = useUserStore();
 const route = useRoute();
 
 </script>
 <template>
-	<div v-if="user" class="site-header">
+	<div v-if="user.loggedIn" class="site-header">
 		<div class="navWrapper">
 			<RouterLink to="/">
 				<picture class="logo">
