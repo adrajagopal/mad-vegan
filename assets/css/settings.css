@@ -5,7 +5,7 @@ html {
 	--black: #111111;
 	--white: #efefef;
 
-	--neutral: gray;
+	--neutral: hsl(230, 5%, 50%);;
 
 	--color: hsl(40, 100%, 50%);
 	--color-dark: hsl(40, 100%, 40%);
