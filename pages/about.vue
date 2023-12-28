@@ -43,7 +43,9 @@
 		<p>Here are some things you might not think about if you're trying to eat vegan or even vegetarian:</p>
 		<ul role="list" class="bulleted-list">
 			<li>Caesar dressing and Worcestershire sauce usually includes anchovies</li>
-			<li>Fish sauce is used in east/southeast Asian foods. Madison has a bunch of Thai restaurants, all of which handle it slightly differently. Some, like Ha Long Bay, don't use fish sauce in any vegetarian dish, while others, like Thai Basil, literally put this disclaimer at the bottom of their Vegetarian menu: <span class="small-voice">"Sorry, we cannot modify our sauce base which contains oyster sauce and curry paste base which contain shrimp paste. It will make a taste change from the original recipe."</span></li>
+			<li>Fish sauce is used in east/southeast Asian foods. Madison has a bunch of Thai restaurants, all of which handle it slightly differently. Some, like Ha Long Bay, don't use fish sauce in any vegetarian dish, while others, like Thai Basil, literally put this disclaimer at the bottom of their Vegetarian menu:
+				<blockquote>"Sorry, we cannot modify our sauce base which contains oyster sauce and curry paste base which contain shrimp paste. It will make a taste change from the original recipe."</blockquote>
+			</li>
 			<li>Many cheese are made with animal rennet, including parmesan, pecorino romano, and other hard cheeses</li>
 			<li>Starburst and many gummy candies uses animal gelatin to get their chewy texture</li>
 			<li>Bone char is commonly used to refine sugar, though this is extremely hard to avoid</li>
