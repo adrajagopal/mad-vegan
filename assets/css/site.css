@@ -28,6 +28,10 @@ body {
 	color: var(--ink);
 }
 
+body.noScroll {
+	overflow: hidden;
+}
+
 [class^="icon-"],
 [class*=" icon-"] {
 	height: 48px;
