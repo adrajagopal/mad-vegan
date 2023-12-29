@@ -2,9 +2,9 @@ export const useLoaderStore = defineStore('loader', () => {
 
 	let fullPage = ref(false);
 	let bodyScroll = ref(false);
-	// const body = document.querySelector('body');
 
 	function toggleFullPageLoader() {
+		const body = document.querySelector('body'); // PULL THIS OUT OF FN
 		fullPage = !fullPage;
 		bodyScroll = !bodyScroll;
 
