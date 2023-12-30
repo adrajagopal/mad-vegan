@@ -52,6 +52,51 @@ form {
 		border-radius: var(--corners);
 	}
 
+	& .photo-container {
+		display: flex;
+		gap: 50px;
+
+		&:has(:focus) {
+			border: 2px solid var(--highlight);
+		}
+
+		& label {
+			padding: 4px;
+			max-width: 100px;
+			border-radius: 50%;
+			overflow: hidden;
+			border: 2px solid transparent;
+			cursor: pointer;
+
+			display: grid;
+			gap: 5px;
+			justify-items: center;
+			align-items: center;
+
+			& * {
+				grid-row: 1/1;
+				grid-column: 1/1;
+			}
+
+			& input {
+				z-index: -1;
+			}
+		}
+
+		& .option {
+			border: 2px solid transparent;
+		}
+
+		& .option:has(:checked) label {
+			border: 2px solid var(--color);
+		}
+
+		& picture {
+			border-radius: 50%;
+		}
+	}
+
+
 	& .success {
 		color: green;
 	}
