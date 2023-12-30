@@ -1,22 +1,24 @@
 <script setup>
-	const supabase = useSupabaseClient()
-
-	const { data, error } = await supabase
-		.from('profiles')
-		.select(`user_id, handle, eats_meat, eats_dairy, diet_category, eats_eggs, avatar, likes_imitation_meat`);
-
 	const user = useUserStore();
 
 	const id = user.id;
 
+	const supabase = useSupabaseClient()
+
+	const { data, error } = await supabase
+		.from('profiles')
+		.select(`user_id, handle, eats_meat, eats_dairy, diet_category, eats_eggs, avatar, likes_imitation_meat`)
+		.eq('user_id', id);
+
+
 	const form = reactive({
-		handle: '',
-		eats_meat: '',
-		eats_dairy: '',
-		diet_category: '',
-		eats_eggs: '',
-		avatar: '',
-		likes_imitation_meat: '',
+		handle: data.handle ?? '',
+		eats_meat: data.eats_meat ?? '',
+		eats_dairy: data.eats_dairy ?? '',
+		diet_category: data.diet_category ?? '',
+		eats_eggs: data.eats_eggs ?? '',
+		avatar: data.avatar ?? '',
+		likes_imitation_meat: data.likes_imitation_meat ?? '',
 		errorMessage: null,
 	});
 
