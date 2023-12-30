@@ -19,7 +19,7 @@ const route = useRoute();
 		</div>
 		
 		<div class="actionsWrapper" >
-			<p class="small-voice">User: {{user.email}}</p>
+			<ProfileBadge/>
 			<SignOut/>
 		</div>
 	</div>
