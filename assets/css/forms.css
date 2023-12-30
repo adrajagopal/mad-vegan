@@ -72,13 +72,18 @@ form {
 		display: flex;
 		gap: 50px;
 
+		@media (max-width: 550px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+
 		&:has(:focus) {
 			border: 2px solid var(--highlight);
 		}
 
 		& label {
 			padding: 4px;
-			max-width: 100px;
+			width: 100px;
 			border-radius: 50%;
 			overflow: hidden;
 			border: 2px solid transparent;
