@@ -10,9 +10,10 @@ html {
 	--color: hsl(40, 100%, 50%);
 	--color-dark: hsl(40, 100%, 40%);
 	--accent: hsl(25, 85%, 80%);
-	--highlight: hsl(225, 65%, 75%);
+	--highlight: hsl(320, 65%, 75%);
 	--warning: hsl(355, 55%, 55%);
 	--warning-dark: hsl(355, 55%, 45%);
+	--focus: hsl(320, 100%, 50%);
 
 	--shadow: hsla(0, 0%, 80%, 0.8);
 	--card-shadow: 2px 2px 2px 1px hsla(0, 40%, 15%, 0.5);
@@ -25,7 +26,7 @@ html {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		--highlight: hsl(225, 30%, 40%);
+		--highlight: hsl(320, 30%, 40%);
 
 		--paper: hsl(230, 10%, 20%);
 		--ink: hsl(40, 50%, 95%);
