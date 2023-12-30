@@ -47,26 +47,8 @@
 <template>
 
 <form @submit.prevent="submit()">
-	<div class="question">
-		<label for="handle">Pick a username</label>
-		<input
-			id="handle"
-			type="text"
-			maxlength="16"
-			v-model="form.handle"
-		/>
-	</div>
-
-	<div class="question">
-		<p>What best describes your diet? We'll get more specific next.</p>
-		<div class="option">
-			<input
-				id="diet_category"
-				type="radio"
-				value="vegan"
-				v-model="form.diet_category"
-			/>
-			<label for="diet_category">Vegan</label>
+	<section>
+		<h2 class="xl-voice">Your identity</h2>
 		<div class="question">
 			<h3 class="med-plus-voice">Choose an avatar</h3>
 			<div class="photo-container">
@@ -117,114 +99,162 @@
 				</div>
 			</div>
 		</div>
-		<div class="option">
+
+		<div class="question">
+			<label class="med-plus-voice" for="handle">Pick a username</label>
 			<input
-				id="diet_category"
-				type="radio"
-				value="vegetarian"
-				v-model="form.diet_category"
+				id="handle"
+				type="text"
+				maxlength="16"
+				pattern="[a-zA-Z0-9_]{0,15}"
+				v-model="form.handle"
 			/>
-			<label for="diet_category">Vegetarian</label>
-		</div>
-		<div class="option">
-			<input
-				id="diet_category"
-				type="radio"
-				value="other"
-				v-model="form.diet_category"
-			/>
-			<label for="diet_category">Other</label>
+			<p class="small-voice">Usernames must be 16 characters or less, and must contain only letters, numbers and underscores.</p>
 		</div>
 
-	</div>	
+		<div class="question">
+			<p class="med-plus-voice">What best describes your diet? We'll get more specific next.</p>
+			<div class="option">
+				<label for="vegan">
+					<input
+						id="vegan"
+						type="radio"
+						value="vegan"
+						name="diet_category"
+						v-model="form.diet_category"
+					/>Vegan
+				</label>
+			</div>
 
-	<div class="question">
-		<p>Do you eat meat?</p>
-		<div class="option">
-			<input
-				id="eats_meat"
-				type="radio"
-				value="1"
-				v-model="form.eats_meat"
-			/>
-			<label for="eats_meat">Yes</label>
-		</div>
-		<div class="option">
-			<input
-				id="eats_meat"
-				type="radio"
-				value="0"
-				v-model="form.eats_meat"
-			/>
-			<label for="eats_meat">No</label>
-		</div>
-	</div>
 
-	<div class="question">
-		<p>Do you eat dairy?</p>
-		<div class="option">
-			<input
-				id="eats_dairy"
-				type="radio"
-				value="1"
-				v-model="form.eats_dairy"
-			/>
-			<label for="eats_dairy">Yes</label>
-		</div>
-		<div class="option">
-			<input
-				id="eats_dairy"
-				type="radio"
-				value="0"
-				v-model="form.eats_dairy"
-			/>
-			<label for="eats_dairy">No</label>
-		</div>
-	</div>
+			<div class="option">
+				<label for="vegetarian">
+					<input
+						id="vegetarian"
+						type="radio"
+						value="vegetarian"
+						name="diet_category"
+						v-model="form.diet_category"
+					/>Vegetarian
+				</label>
+			</div>
 
-	<div class="question">
-		<p>Do you eat eggs?</p>
-		<div class="option">
-			<input
-				id="eats_eggs"
-				type="radio"
-				value="1"
-				v-model="form.eats_eggs"
-			/>
-			<label for="eats_eggs">Yes</label>
+			<div class="option">
+				<label for="other">
+					<input
+						id="other"
+						type="radio"
+						value="other"
+						name="diet_category"
+						v-model="form.diet_category"
+					/>Other
+					<input type="text" id="other_text">
+				</label>
+			</div>
 		</div>
-		<div class="option">
-			<input
-				id="eats_eggs"
-				type="radio"
-				value="0"
-				v-model="form.eats_eggs"
-			/>
-			<label for="eats_eggs">No</label>
-		</div>
-	</div>
+	</section>
 
-	<div class="question">
-		<p>Do you like imitation meats, or would you rather just have your vegan proteins as they are?</p>
-		<div class="option">
-			<input
-				id="likes_imitation_meat"
-				type="radio"
-				value="1"
-				v-model="form.likes_imitation_meat"
-			/>
-			<label for="likes_imitation_meat">Yep. Bring on the chik'n and Beyond burgers</label>
+	<section>
+		<h2 class="xl-voice">Diet Details</h2>
+		<div class="question">
+			<p class="med-plus-voice">Do you eat meat?</p>
+			<div class="option">
+				<input
+					id="meat_1"
+					type="radio"
+					value="1"
+					v-model="form.eats_meat"
+					name="eats_meat"
+				/>
+				<label for="meat_1">Yes</label>
+			</div>
+			<div class="option">
+				<input
+					id="meat_0"
+					type="radio"
+					value="0"
+					v-model="form.eats_meat"
+					name="eats_meat"
+				/>
+				<label for="meat_0">No</label>
+			</div>
 		</div>
-		<div class="option">
-			<input
-				id="likes_imitation_meat"
-				type="radio"
-				value="0"
-				v-model="form.likes_imitation_meat"
-			/>
-			<label for="likes_imitation_meat">Nope. Just be beans and tofu</label>
+
+		<div class="question">
+			<p class="med-plus-voice">Do you eat dairy?</p>
+			<div class="option">
+				<input
+					id="dairy_1"
+					type="radio"
+					value="1"
+					name="eats_dairy"
+					v-model="form.eats_dairy"
+				/>
+				<label for="dairy_1">Yes</label>
+			</div>
+			<div class="option">
+				<input
+					id="dairy_0"
+					type="radio"
+					value="0"
+					name="eats_dairy"
+					v-model="form.eats_dairy"
+				/>
+				<label for="dairy_0">No</label>
+			</div>
 		</div>
-	</div>
+
+		<div class="question">
+			<p class="med-plus-voice">Do you eat eggs?</p>
+			<div class="option">
+				<input
+					id="eggs_1"
+					type="radio"
+					value="1"
+					name="eats_eggs"
+					v-model="form.eats_eggs"
+				/>
+				<label for="eggs_1">Yes</label>
+			</div>
+			<div class="option">
+				<input
+					id="eggs_0"
+					type="radio"
+					value="0"
+					name="eats_eggs"
+					v-model="form.eats_eggs"
+				/>
+				<label for="eggs_0">No</label>
+			</div>
+		</div>
+
+		<div class="question">
+			<p class="med-plus-voice">Do you like imitation meats, or would you rather just have your vegan proteins as they are?</p>
+			<div class="option">
+				<input
+					id="imitation_meat_1"
+					type="radio"
+					value="1"
+					name="likes_imitation_meat"
+					v-model="form.likes_imitation_meat"
+				/>
+				<label for="imitation_meat_1">Yep. Bring on the chik'n and Beyond burgers</label>
+			</div>
+			<div class="option">
+				<input
+					id="imitation_meat_0"
+					type="radio"
+					value="0"
+					name="likes_imitation_meat"
+					v-model="form.likes_imitation_meat"
+				/>
+				<label for="imitation_meat_0">Nope. Just be beans and tofu</label>
+			</div>
+		</div>
+	</section>
+	
+
+	
 
 
 	<button type="submit">Submit</button>
