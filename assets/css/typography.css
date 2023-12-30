@@ -25,6 +25,12 @@ body {
 	font-weight: 500;
 }
 
+.med-plus-voice {
+	font-family: var(--secondary-font);
+	font-size: 1.25rem;
+	font-weight: 400;	
+}
+
 .medium-voice {
 	font-family: var(--secondary-font);
 	font-size: 1rem;
@@ -33,7 +39,7 @@ body {
 
 .small-voice {
 	font-family: var(--secondary-font);
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 	font-weight: 400;
 }
 
