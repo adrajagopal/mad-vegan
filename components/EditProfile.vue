@@ -22,7 +22,7 @@
 
 	async function submit() {
 
-		if (!form.handle || !form.diet_category || !form.eats_meat || !form.eats_dairy || !form.eats_eggs || !form.likes_imitation_meat) {
+		if (!form.handle || !form.diet_category || !form.eats_meat || !form.eats_dairy || !form.eats_eggs || !form.likes_imitation_meat || !form.avatar) {
 			form.errorMessage = 'Please fill out all profile fields.';
 			return;
 		}
@@ -36,6 +36,7 @@
 				eats_eggs: form.eats_eggs,
 				diet_category: form.diet_category,
 				likes_imitation_meat: form.likes_imitation_meat,
+				avatar: form.avatar,
 			})
 			.eq('user_id', id)
 
@@ -66,6 +67,55 @@
 				v-model="form.diet_category"
 			/>
 			<label for="diet_category">Vegan</label>
+		<div class="question">
+			<h3 class="med-plus-voice">Choose an avatar</h3>
+			<div class="photo-container">
+				<div class="option photo">
+					<label for="default-avatar">
+						<picture>
+							<img src="@/assets/default-avatar.jpg" alt="orange green gradient">
+						</picture>
+						<input
+							id="default-avatar"
+							type="radio"
+							value="default-avatar"
+							v-model="form.avatar"
+							name="avatar"
+							checked
+						/>
+					</label>
+				</div>
+				
+				<div class="option photo">
+					<label for="tofu">
+						<picture>
+							<img src="@/assets/tofu.jpg" alt="a gaggle of tofu">
+						</picture>
+						<input
+							id="tofu"
+							type="radio"
+							value="tofu"
+							name="avatar"
+							v-model="form.avatar"
+						/>
+					</label>
+				</div>
+				
+				<div class="option photo">
+					<label for="cilantro">
+						<picture>
+							<img src="@/assets/cilantro.jpg" alt="a bunch of cilantro">
+						</picture>
+						<input
+							id="cilantro"
+							type="radio"
+							value="cilantro"
+							name="avatar"
+							v-model="form.avatar"
+						/>
+					</label>
+				</div>
+			</div>
 		</div>
 		<div class="option">
 			<input
