@@ -12,6 +12,10 @@ form {
 		accent-color: var(--highlight);
 	}
 
+	& input:focus, button:focus {
+		outline: 2px solid var(--focus);
+	}
+
 	& .question {
 		display: grid;
 		gap: 5px;
