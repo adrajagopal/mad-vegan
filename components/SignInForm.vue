@@ -1,5 +1,8 @@
 <script setup>
 	const supabase = useSupabaseClient();
+
+	const loader = useLoaderStore();
+
 	const form = reactive({
 	 email: '',
 	 password: '',
@@ -33,7 +36,6 @@
 		}
 
 		form.successMessage = "Logging you in now!";
-
 	}
 
 	async function submit() {
@@ -41,9 +43,9 @@
 			await signIn();
 
 			if (form.successMessage) {
-				//show loader
+				loader.toggleFullPageLoader();
 
-				await delay(2000);
+				await delay(3000);
 				await navigateTo('/');
 			}
 		}

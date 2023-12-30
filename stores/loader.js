@@ -1,18 +1,18 @@
 export const useLoaderStore = defineStore('loader', () => {
 
 	let fullPage = ref(false);
-	let bodyScroll = ref(false);
+	let bodyScrollDisabled = ref(false);
 
 	function toggleFullPageLoader() {
-		const body = document.querySelector('body'); // PULL THIS OUT OF FN
-		fullPage = !fullPage;
-		bodyScroll = !bodyScroll;
+		const body = document.querySelector('body');
+		fullPage.value = !fullPage.value;
+		bodyScrollDisabled.value = !bodyScrollDisabled.value;
 
-		return bodyScroll === true ? body.classList.add('noScroll') :  body.classList.remove('noScroll');
+		return bodyScrollDisabled.value === true ? body.classList.add('noScroll') :  body.classList.remove('noScroll');
 	}
 
 	return {
-		fullPage, bodyScroll, toggleFullPageLoader
+		fullPage, bodyScrollDisabled, toggleFullPageLoader
 	}
 
 })
