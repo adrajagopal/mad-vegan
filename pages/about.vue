@@ -8,9 +8,9 @@
 
 		<h2 class="xl-voice">Mad Vegan is your guide.</h2>
 
-		<p>This story starts, unfortunately, on Reddit -- in the r/madisonwi sub. There was a thread asking about vegetarian options in town. I commented, explaining that I love Tex Tubb's but that I've found small pieces of meat contaminating my meals multiple times. I got downvoted, because it's Reddit.</p>
+		<p>This story starts, unfortunately, on Reddit -- in the r/madisonwi sub. There was a thread asking about vegetarian options in town. I commented, explaining that, while I love Tex Tubb's, I've found chunks of beef in my meals multiple times. I got downvoted, because it's Reddit.</p>
 
-		<p>That wasn't necessarily the origin story for this site, but it still really irks me. I'm petty and let things bug me for too long 🤷🏽‍♂️.</p>
+		<p>That wasn't necessarily the origin story for this site, but it still really irks me. What can I say? I can be petty 🤷🏽‍♂️</p>
 
 		<p>Anyway, I think the Madison vegan community needs a better resource -- a data-driven one -- to help find good vegan restaurants.</p>
 
