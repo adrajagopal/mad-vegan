@@ -5,7 +5,7 @@
 		.from('restaurants')
 		.select(`id, name, lat, long, website, cuisine, has_vegan_menu, is_completely_vegan`);
 
-	let iconUrl = "https://ucxtdreexegztsldmyjv.supabase.co/storage/v1/object/public/media-library/pindrop-green-dark-gradient.svg?t=2023-12-27T04%3A36%3A59.120Z";
+	let iconUrl = "https://ucxtdreexegztsldmyjv.supabase.co/storage/v1/object/public/media-library/pindrop-rutabaga-gradient.svg?t=2024-02-06T20%3A27%3A04.802Z";
 	
 	const iconWidth = 34;
 	const iconHeight = 41;
