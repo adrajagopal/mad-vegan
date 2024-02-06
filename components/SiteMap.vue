@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+	const currentYear = new Date().getFullYear()
+</script>
 
 <template>
-		<p>Mad Vegan 2023</p>
+		<p>Mad Vegan {{currentYear}}</p>
 </template>
 
 <style scoped>
