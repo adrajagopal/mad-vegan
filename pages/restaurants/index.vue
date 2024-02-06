@@ -26,5 +26,9 @@
 	.restaurant-card {
 		padding: 8px;
 		border: 2px solid var(--ink);
+
+		&:hover {
+			background-color: var(--paper-dark);
+		}
 	}
 </style>

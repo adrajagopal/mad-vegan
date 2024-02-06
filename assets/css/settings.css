@@ -4,32 +4,42 @@ html {
 
 	--black: #111111;
 	--white: #efefef;
+	--paper: hsl(45, 100%, 98%);
+	--paper-dark: hsl(45, 100%, 90%);
+	--ink: hsl(45, 0%, 20%);
+	--neutral-grey: hsl(230, 5%, 50%);
 
-	--neutral: hsl(230, 5%, 50%);;
+	--hue-primary: 330;
+	--hue-accent: 150;
 
-	--color: hsl(40, 100%, 50%);
-	--color-dark: hsl(40, 100%, 40%);
-	--accent: hsl(25, 85%, 80%);
+	--color: hsl(var(--hue-primary), 65%, 55%);
+	--color-light: hsl(var(--hue-primary), 65%, 80%);
+	--color-dark: hsl(var(--hue-primary), 65%, 35%);
+
+	--accent: hsl(var(--hue-accent), 95%, 40%);
+	/* ADD GREEN ACCENT LIGHT & DARK */
+
+/* REVIEW THE REST OF THESE IN LIGHT MODE */
 	--highlight: hsl(320, 65%, 75%);
+
 	--warning: hsl(355, 55%, 55%);
 	--warning-dark: hsl(355, 55%, 45%);
+
 	--focus: hsl(320, 100%, 50%);
 
 	--shadow: hsla(0, 0%, 80%, 0.8);
 	--card-shadow: 2px 2px 2px 1px hsla(0, 40%, 15%, 0.5);
 
 	--corners: 5px;
-
-	--paper: hsl(40, 50%, 98%);
-	--ink: hsl(230, 10%, 15%);
 }
 
 @media (prefers-color-scheme: dark) {
 	html {
 		--highlight: hsl(320, 30%, 40%);
 
-		--paper: hsl(230, 10%, 20%);
-		--ink: hsl(40, 50%, 95%);
+		--paper: hsl(45, 0%, 20%);
+		--paper-dark: hsl(45, 20%, 30%);
+		--ink: hsl(45, 100%, 98%);;
 
 		--shadow: hsla(0, 0%, 40%, 0.8);
 	}
