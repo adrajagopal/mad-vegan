@@ -8,7 +8,7 @@ const restaurant = reactive({
 	cuisine: "",
 });
 
-const database = window.localStorage;
+// const database = window.localStorage;
 
 function getList(key) {
 	return database.getItem(key);
