@@ -12,9 +12,9 @@ html {
 	--hue-primary: 330;
 	--hue-accent: 150;
 
-	--color: hsl(var(--hue-primary), 65%, 55%);
-	--color-light: hsl(var(--hue-primary), 65%, 80%);
-	--color-dark: hsl(var(--hue-primary), 65%, 35%);
+	--color: hsl(var(--hue-primary), 75%, 65%);
+	--color-light: hsl(var(--hue-primary), 75%, 80%);
+	--color-dark: hsl(var(--hue-primary), 75%, 35%);
 
 	--accent: hsl(var(--hue-accent), 95%, 40%);
 	/* ADD GREEN ACCENT LIGHT & DARK */
@@ -30,14 +30,15 @@ html {
 	--shadow: hsla(0, 0%, 80%, 0.8);
 	--card-shadow: 2px 2px 2px 1px hsla(0, 40%, 15%, 0.5);
 
-	--corners: 5px;
+	--border: 3px solid var(--ink);
+	--corners: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
 	html {
 		--highlight: hsl(320, 30%, 40%);
 
-		--paper: hsl(45, 0%, 20%);
+		--paper: hsl(45, 20%, 10%);
 		--paper-dark: hsl(45, 20%, 30%);
 		--ink: hsl(45, 100%, 98%);;
 
