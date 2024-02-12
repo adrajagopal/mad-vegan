@@ -38,8 +38,20 @@ const route = useRoute();
 
 		<div class="actionsWrapper" >
 			<nav>
-				<RouterLink v-if="route.name !== 'create-account'" to="/create-account">Create Account</RouterLink>
-				<button v-if="route.name !== 'sign-in'"><RouterLink to="/sign-in">Sign In</RouterLink></button>
+				<Button
+					v-if="route.name !== 'sign-in'"
+					:isLink="true"
+					linkHref="/sign-in"
+					copy="Sign In"
+					class="fill color"
+				/>
+				<Button
+					v-if="route.name !== 'create-account'"
+					:isLink="true"
+					linkHref="/create-account"
+					copy="Create Account"
+					class="transparent color"
+				/>
 			</nav>
 		</div>
 	</div>
