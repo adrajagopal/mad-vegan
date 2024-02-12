@@ -30,7 +30,7 @@ export default defineNuxtConfig({
 	supabase: {
 		redirectOptions: {
 			login: '/sign-in',
-			exclude: ['/', '/create-account', '/about', '/restaurants'],
+			exclude: ['/', '/create-account', '/about', '/restaurants', '/design-system'],
 		}
 	}
 })
