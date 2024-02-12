@@ -34,18 +34,23 @@
 
 <style scoped>
 	button {
-/*		max-width: 150px;*/
-		background-color: var(--color);
-		color: white;
+		min-width: 150px;
+	}
+
+	.button {
+		cursor: pointer;
+	}
+
+	button, .button {
+		justify-self: start; /* since i make buttons display: block, this prevents it from spanning full width of parent*/
 		font-size: 16px;
 		font-weight: 600;
 		text-wrap: nowrap;
+		text-align: center;
+		text-decoration: none;
 		padding: 8px;
-		border: var(--border);
 		border-radius: var(--corners);
 
-		&:hover {
-			background-color: var(--color-light);
 		/* fallback if no props */
 		background-color: var(--color);
 		color: var(--paper);
