@@ -1,24 +1,35 @@
 <script setup>
 
-	/* props
-		submit boolean
-		type (action, link) --> if link, drop in a RouterLink
-			if link --> href
-		style class
-		copy
-
-		
-
-
-
-	*/
-	
-
+	const props = defineProps({
+		copy: String,
+		btnType: String,
+		isLink: Boolean,
+		styleClass: String,
+		linkHref: String,
+		linkTarget: String
+	});
 
 </script>
 
 <template>
-<button>Long text button name</button>
+	
+	<NuxtLink
+		class="button"
+		v-if="isLink"
+		:to="linkHref"
+		:target="linkTarget"
+	>
+		{{copy}}
+		<span v-if="linkTarget === `_blank`">--></span>
+	</NuxtLink>
+
+	<button
+		v-else
+		type="btnType"
+	>
+		{{copy}}
+	</button>
+
 </template>
 
 <style scoped>
