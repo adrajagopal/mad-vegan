@@ -46,13 +46,51 @@
 
 		&:hover {
 			background-color: var(--color-light);
+		/* fallback if no props */
+		background-color: var(--color);
+		color: var(--paper);
+		border: var(--border);
+
+		&.fill.color {
+			background-color: var(--color);
+			color: var(--paper);
+			border-color: var(--ink);
+
+			&:hover {
+				background-color: var(--color-light);
+			}
+		}
+
+		&.fill.paper {
+			background-color: var(--paper-accent);
+			color: var(--ink);
+			border-color: var(--ink);
+
+			&:hover {
+				background-color: var(--paper);
+			}
+
+
+
+		}
+
+		&.transparent {
+			background-color: transparent;
+			border: 2px solid transparent;
+
+			&.color {
+				color: var(--color);
+			}
+
+			&.ink {
+				color: var(--ink);
+			}
+
 		}
 
 		&:active {
-			background-color: var(--color-dark);
+			filter: opacity(50%);
 		}
-
-		cursor: pointer;
 
 		&.warning {
 			background-color: var(--warning);
