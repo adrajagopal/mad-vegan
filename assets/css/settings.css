@@ -4,13 +4,15 @@ html {
 
 	--black: #111111;
 	--white: #efefef;
-	--paper: hsl(45, 100%, 98%);
-	--paper-dark: hsl(45, 100%, 90%);
+
 	--ink: hsl(45, 0%, 20%);
 	--neutral-grey: hsl(230, 5%, 50%);
 
 	--hue-primary: 330;
 	--hue-accent: 150;
+
+	--paper: hsl(45, 100%, 98%);
+	--paper-accent: hsl(45, 100%, 90%);
 
 	--color: hsl(var(--hue-primary), 75%, 65%);
 	--color-light: hsl(var(--hue-primary), 75%, 80%);
@@ -39,8 +41,9 @@ html {
 		--highlight: hsl(320, 30%, 40%);
 
 		--paper: hsl(45, 20%, 10%);
-		--paper-dark: hsl(45, 20%, 30%);
-		--ink: hsl(45, 100%, 98%);;
+		--paper-accent: hsl(45, 20%, 40%);
+
+		--ink: hsl(45, 100%, 98%);
 
 		--shadow: hsla(0, 0%, 40%, 0.8);
 	}
