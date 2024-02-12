@@ -28,7 +28,7 @@
 		border: 2px solid var(--ink);
 
 		&:hover {
-			background-color: var(--paper-dark);
+			background-color: var(--paper-accent);
 		}
 	}
 </style>

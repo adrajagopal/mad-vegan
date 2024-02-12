@@ -32,7 +32,7 @@
 		max-width: 400px;
 
 		&:focus {
-			background-color: var(--paper-dark);
+			background-color: var(--paper-accent);
 		}
 	}
 
