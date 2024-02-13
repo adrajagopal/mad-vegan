@@ -2,7 +2,7 @@ form {
 	max-width: 800px;
 	display: grid;
 	gap: 40px;
-	accent-color: var(--color);
+	accent-color: var(--accent);
 
 	& p {
 		max-width: 50ch;
