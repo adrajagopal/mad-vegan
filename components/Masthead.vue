@@ -76,6 +76,10 @@ const route = useRoute();
 		gap: 10px;
 		align-items: center;
 	}
+
+	button, .button {
+		min-width: 100px;
+	}
 }
 
 .logo {
