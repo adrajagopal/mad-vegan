@@ -34,11 +34,15 @@
 
 <style scoped>
 	button {
-		min-width: 150px;
+		min-width: 180px;
 	}
 
 	.button {
 		cursor: pointer;
+
+		&.fill {
+			min-width: 100px;
+		}
 	}
 
 	button, .button {
