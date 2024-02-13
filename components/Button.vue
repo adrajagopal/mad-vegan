@@ -98,7 +98,7 @@
 		}
 
 		&:active {
-			filter: opacity(50%);
+			filter: brightness(50%);
 		}
 
 		&.warning {

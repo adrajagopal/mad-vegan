@@ -2,10 +2,13 @@
 
 <template>
 	<inner-column>
-		<form>
-			<!-- <InputCheckbox/> -->
-			<!-- <InputRadio/> -->
-			<!-- <InputText/> -->
+		<!-- <InputCheckbox/> -->
+		<!-- <InputRadio/> -->
+		<!-- <InputText/> -->
+		
+
+		<section>
+			<h2 class="xl-voice">Buttons</h2>
 			<Button
 				copy="Submit"
 				class="fill color"
@@ -28,13 +31,18 @@
 				linkTarget="_blank"
 				class="transparent ink"
 			/>
-
-		</form>
-
-
+		</section>
 
 
 	</inner-column>
 </template>
 
-<style scoped></style>
+<style scoped>
+	
+	section {
+		display: grid;
+		gap: 20px;
+		padding: 12px;
+		border: var(--border);
+	}
+</style>
