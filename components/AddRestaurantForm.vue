@@ -65,7 +65,11 @@ function add() {
 			/>
 		</div>
 
-		<button type="submit">Add restaurant</button>
+		<Button
+			:btnType="submit"
+			copy="Add Restaurant"
+			styleClass="fill paper"
+		/>
 	</form>
 </template>
 

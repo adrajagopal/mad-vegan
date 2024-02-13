@@ -258,8 +258,11 @@
 
 	
 
-
-	<button type="submit">Submit</button>
+	<Button
+		:btnType="submit"
+		copy="Save Profile"
+		styleClass="fill paper"
+	/>
 </form>
 
 <p class="success" v-if="form.successMessage">

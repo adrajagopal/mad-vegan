@@ -56,7 +56,11 @@
 			/>
 		</div>
 
-		<button type="submit">Submit</button>
+		<Button
+			:btnType="submit"
+			copy="Create Account"
+			styleClass="fill color"
+		/>
 	</form>
 
 	<p class="success" v-if="form.successMessage">

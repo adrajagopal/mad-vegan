@@ -75,7 +75,11 @@
 			/>
 		</div>
 
-		<button type="submit">Submit</button>
+		<Button
+			:btnType="submit"
+			copy="Sign In"
+			styleClass="fill color"
+		/>
 	</form>
 
 	<p class="success" v-if="form.successMessage">

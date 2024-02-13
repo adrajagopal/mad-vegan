@@ -18,7 +18,12 @@
 </script>
 
 <template>
-	<button type='button' @click="signOut()">Sign Out</button>
+	<Button
+		@click="signOut()"
+		btnType="button"
+		copy="Sign Out"
+		class="transparent color"
+	/>
 </template>
 
 <style scoped></style>
