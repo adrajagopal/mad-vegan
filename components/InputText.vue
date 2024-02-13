@@ -1,21 +1,21 @@
 <script  setup>
-/*data
-	"for" and "id" values
-	label text
-	v-model value
-	required boolean
-	type (text, email, password, number)
-	autocomplete
-	stack direction -- vert or horiz
-	stack order -- default or reverse
-*/
+
+	const props = defineProps({
+		inputType: String, //values: email, number, text, pw
+		name: String, // used for: for, id, v-model
+		required: Boolean,
+		label: String, //used for: label element
+		autocomplete: String, //values: on, off
+		stackDetails: String, // direction: "column" or leave blank for row; order: "reverse" or leave blank for default
+		//next -- handle defineModel stuff
+	});
 
 </script>
 
 <template>
-	<div class="input-container">
-		<label class="large-voice" for="lat">Latitude</label>
-		<input required id="lat" type="number"/>
+	<div class="input-container" :class="stackDetails">
+		<label class="med-plus-voice" :for="name">{{label}}</label>
+		<input :required="required" :id="name" :type="inputType"/>
 	</div>
 </template>
 
