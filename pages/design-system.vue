@@ -2,12 +2,47 @@
 
 <template>
 	<inner-column>
-		<!-- <InputCheckbox/> -->
+	<form>
 		<!-- <InputRadio/> -->
-		<!-- <InputText/> -->
+
+		<section class="inputs">
+			<h2 class="xl-voice">Text inputs</h2>
+			<InputText
+				inputType="number"
+				name="numberValue"
+				:required="false"
+				label="USD"
+				stackDetails="row reverse"
+			/>
+			<InputText
+				inputType="text"
+				name="textValue"
+				:required="false"
+				label="Short Text"
+				stackDetails="row"
+			/>
+
+			<InputText
+				inputType="email"
+				name="emailValue"
+				:required="false"
+				label="Email Address"
+				autcomplete="off"
+				stackDetails="column"
+			/>
+
+			<InputText
+				inputType="password"
+				name="passValue"
+				:required="false"
+				label="Password"
+				autcomplete="off"
+				stackDetails="column"
+			/>
+		</section>
 		
 
-		<section>
+		<section class="buttons">
 			<h2 class="xl-voice">Buttons</h2>
 			<Button
 				copy="Submit"
@@ -33,7 +68,7 @@
 			/>
 		</section>
 
-
+	</form>
 	</inner-column>
 </template>
 
