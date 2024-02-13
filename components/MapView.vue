@@ -54,4 +54,18 @@
 		background-color: var(--paper);
 	}
 
+	div.leaflet-control-zoom.leaflet-bar {
+/*		border: var(--border);*/
+		border-color: var(--color);
+
+		a.leaflet-control-zoom-in,
+		a.leaflet-control-zoom-out {
+			color: var(--white);
+			border-color: var(--white);
+			text-decoration: none;
+			background-color: var(--color);
+			border-radius: 0px;
+		}
+	}
+
 </style>
