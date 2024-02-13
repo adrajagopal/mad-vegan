@@ -4,10 +4,16 @@
 		copy: String,
 		btnType: String,
 		isLink: Boolean,
-		styleClass: String,
 		linkHref: String,
 		linkTarget: String
 	});
+
+	/* 
+		style should be defined on the component parent -- <Button /> -- like a normal CSS class
+		options are:
+		**** style like a button: .fill.color, .fill.paper
+		**** style like a link: .transparent.color, .transparent.ink
+	*/
 
 </script>
 
@@ -37,15 +43,12 @@
 		min-width: 180px;
 	}
 
-	.button {
-		cursor: pointer;
-
-		&.fill {
-			min-width: 100px;
-		}
+	.button.fill {
+		min-width: 100px;
 	}
 
 	button, .button {
+		cursor: pointer;
 		justify-self: start; /* since i make buttons display: block, this prevents it from spanning full width of parent*/
 		font-size: 16px;
 		font-weight: 600;
