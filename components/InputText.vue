@@ -25,14 +25,38 @@
 	input[type="number"],
 	input[type="email"],
 	input[type="password"] {
-		padding: 12px;
+		padding: 8px 12px;
 		border: var(--border);
+		border-radius: var(--corners);
 		background-color: var(--paper);
 		font-size: 16px;
 		max-width: 400px;
 
 		&:focus {
 			background-color: var(--paper-accent);
+		}
+	}
+
+	.input-container {
+		display: flex;
+		gap: 12px;
+
+		&.row {
+			align-items: center;
+		}
+
+		&.reverse {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+		}
+
+		&.column {
+			flex-direction: column;
+		}
+
+		&.column.reverse {
+			flex-direction: column-reverse;
+			justify-content: flex-end;
 		}
 	}
 
