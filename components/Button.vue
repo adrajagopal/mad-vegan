@@ -63,27 +63,25 @@
 		color: var(--paper);
 		border: var(--border);
 
-		&.fill.color {
-			background-color: var(--color);
-			color: var(--paper);
-			border-color: var(--ink);
-
-			&:hover {
-				background-color: var(--color-light);
-			}
-		}
-
-		&.fill.paper {
-			background-color: var(--paper-accent);
+		&.fill {
 			color: var(--ink);
 			border-color: var(--ink);
 
-			&:hover {
-				background-color: var(--paper);
+			&.color {
+				background-color: var(--color);
+
+				&:hover {
+					background-color: var(--color-light);
+				}
 			}
 
+			&.paper {
+				background-color: var(--paper-accent);
 
-
+				&:hover {
+					background-color: var(--paper);
+				}
+			}
 		}
 
 		&.transparent {
