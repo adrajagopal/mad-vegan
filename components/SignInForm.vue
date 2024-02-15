@@ -76,7 +76,7 @@
 		</div>
 
 		<Button
-			:btnType="submit"
+			btnType="submit"
 			copy="Sign In"
 			styleClass="fill color"
 		/>

@@ -57,7 +57,7 @@
 		</div>
 
 		<Button
-			:btnType="submit"
+			btnType="submit"
 			copy="Create Account"
 			styleClass="fill color"
 		/>

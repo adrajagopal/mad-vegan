@@ -66,7 +66,7 @@ function add() {
 		</div>
 
 		<Button
-			:btnType="submit"
+			btnType="submit"
 			copy="Add Restaurant"
 			styleClass="fill paper"
 		/>

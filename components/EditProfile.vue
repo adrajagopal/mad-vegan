@@ -41,7 +41,6 @@
 				avatar: form.avatar,
 			})
 			.eq('user_id', id)
-
 	}
 
 </script>
@@ -259,7 +258,7 @@
 	
 
 	<Button
-		:btnType="submit"
+		btnType="submit"
 		copy="Save Profile"
 		styleClass="fill paper"
 	/>
