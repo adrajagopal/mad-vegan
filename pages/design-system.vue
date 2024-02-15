@@ -9,14 +9,14 @@
 			<h2 class="xl-voice">Text inputs</h2>
 			<InputText
 				inputType="number"
-				name="numberValue"
+				forId="numberValue"
 				:required="false"
 				label="USD"
 				stackDetails="row reverse"
 			/>
 			<InputText
 				inputType="text"
-				name="textValue"
+				forId="textValue"
 				:required="false"
 				label="Short Text"
 				stackDetails="row"
@@ -24,7 +24,7 @@
 
 			<InputText
 				inputType="email"
-				name="emailValue"
+				forId="emailValue"
 				:required="false"
 				label="Email Address"
 				autcomplete="off"
@@ -33,7 +33,7 @@
 
 			<InputText
 				inputType="password"
-				name="passValue"
+				forId="passValue"
 				:required="false"
 				label="Password"
 				autcomplete="off"

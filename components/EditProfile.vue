@@ -103,7 +103,7 @@
 
 		<InputText
 			inputType="text"
-			name="handle"
+			forId="handle"
 			:required="true"
 			label="Pick a username"
 			stackDetails="column"

@@ -3,7 +3,7 @@
 	const props = defineProps({
 		inputType: String, //values: email, number, text, pw
 
-		name: String, // used for: for, id, v-model
+		forId: String, // used for: for, id
 		label: String, //used for: label element
 
 		required: Boolean,
@@ -26,10 +26,10 @@
 <template>
 	<div class="input-container">
 		<div class="input" :class="stackDetails">
-			<label class="med-plus-voice" :for="name">{{label}}</label>
+			<label class="med-plus-voice" :for="forId">{{label}}</label>
 			<input
 				:type="inputType"
-				:id="name"
+				:id="forId"
 				:required="required"
 				:autocomplete="autocomplete"
 				:minlength="minlength"
@@ -63,12 +63,12 @@
 	.input-container {
 		display: flex;
 		flex-direction: column;
-		gap: 12px;
+		gap: 8px;
 	}
 
 	.input {
 		display: flex;
-		gap: 12px;
+		gap: 8px;
 
 		&.row {
 			align-items: center;

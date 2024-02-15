@@ -38,7 +38,7 @@
 	<form @submit.prevent="submit()">
 		<InputText
 			inputType="email"
-			name="email"
+			forId="email"
 			label="Email Address"
 			autcomplete="off"
 			stackDetails="column"
@@ -47,7 +47,7 @@
 
 		<InputText
 			inputType="password"
-			name="password"
+			forId="password"
 			label="Password"
 			autcomplete="off"
 			stackDetails="column"
