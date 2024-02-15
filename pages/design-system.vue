@@ -73,11 +73,32 @@
 </template>
 
 <style scoped>
-	
 	section {
 		display: grid;
 		gap: 20px;
 		padding: 12px;
 		border: var(--border);
 	}
+	
+	.inputs {
+		gap: 30px;
+	}
+
+	.buttons {
+		grid-template-columns: 1fr 1fr;
+
+		& h2 {
+			grid-column: span 2;
+		}
+
+		@media (max-width: 450px) {
+			grid-template-columns: 1fr;
+
+			& h2 {
+				grid-column: unset;
+			}
+		}
+	}
+
+
 </style>
