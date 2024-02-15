@@ -101,17 +101,18 @@
 			</div>
 		</div>
 
-		<div class="question">
-			<label class="med-plus-voice" for="handle">Pick a username</label>
-			<input
-				id="handle"
-				type="text"
-				maxlength="16"
-				pattern="[a-zA-Z0-9_]{0,15}"
-				v-model="form.handle"
-			/>
-			<p class="small-voice">Usernames must be 16 characters or less, and must contain only letters, numbers and underscores.</p>
-		</div>
+		<InputText
+			inputType="text"
+			name="handle"
+			:required="true"
+			label="Pick a username"
+			stackDetails="column"
+			v-model="form.handle"
+			:minlength="3"
+			:maxlength="16"
+			pattern="[a-zA-Z0-9_]{0,15}"
+			helper="Usernames must be 3-16 characters, containing only letters, numbers and underscores."
+		/>
 
 		<div class="question">
 			<p class="med-plus-voice">What best describes your diet? We'll get more specific next.</p>
