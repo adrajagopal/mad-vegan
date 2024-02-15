@@ -60,6 +60,12 @@
 		}
 	}
 
+	.input-container {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
 	.input {
 		display: flex;
 		gap: 12px;
