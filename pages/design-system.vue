@@ -1,9 +1,66 @@
-<script setup></script>
+<script setup>
+	
+	const questions = [
+		{
+			title: "Please select a diet option",
+			name: "diet",
+			options: [
+				{
+					forId: "vegan",
+					value: "vegan",
+					label: "Vegan"
+				},
+				{
+					forId: "vegetarian",
+					label: "Vegetarian"
+				},
+				{
+					forId: "meat",
+					value: "meatatarian",
+					label: "Omnivore",
+					checked: true
+				}
+			]
+		},
+		{
+			title: "What's your favorite cuisine?",
+			name: "cuisinePreference",
+			options: [
+				{
+					forId: "italian",
+					value: "italian",
+					label: "Italian"
+				},
+				{
+					forId: "mexican",
+					label: "Mexican"
+				},
+				{
+					forId: "indian",
+					value: "indian",
+					label: "Indian",
+					checked: true
+				}
+			]
+		}
+	];
+
+</script>
 
 <template>
 	<inner-column>
 	<form>
-		<!-- <InputRadio/> -->
+		<section class="radios">
+			<h2 class="xl-voice">Radio buttons</h2>
+			<div class="radio-parent" style="display: grid; gap: 6px">
+				<InputRadio
+					v-for="question in questions"
+					:title="question.title"
+					:name="question.name"
+					:options="question.options"
+				/>
+			</div>
+		</section>
 
 		<section class="inputs">
 			<h2 class="xl-voice">Text inputs</h2>
