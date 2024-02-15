@@ -1,36 +1,50 @@
-<script  setup>
+<script setup>
 
-/* props
-	for & id
-	label text
-	label class??
-	type=radio
-	value
-	v-model
-	name (must be shared across all options)
-	sort order as a class (reverse or empty)
-*/
+	const props = defineProps({
+		title: String, //the question that accompanies the options
+		name: String, //shared across all options
+		options: {
+			forId: String,
+			value: String, //might be same as forId	
+			label: String			
+		}
+	});
+
+	const model = defineModel();
 
 </script>
 
 <template>
-	<div class="radio-container" :class="sortOrder">
-		<label for="vegan">
-			<input
-				id="vegan"
-				type="radio"
-				value="vegan"
-				name="diet_category"
-			/>Option
-		</label>
+	<div class="radio-container">
+		<h3 class="large-voice">{{title}}</h3>
+		<div class="radio-options">
+			<label :for="option.forId" v-for="option in props.options">
+				<input
+					type="radio"
+					v-model="model"
+					:id="option.forId"
+					:value="option.value ?? option.forId"
+					:name="option.name"
+				/>{{option.label}}
+			</label>
+		</div>
 	</div>
 </template>
 
 <style scoped>
-	
-	.radio-container.reverse label {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: flex-start;
+	.radio-container {
+		display: grid;
+		gap: 8px;
 	}
+
+	.radio-options {
+		display: grid;
+		gap: 6px;
+	}
+
+	.radio-container + .radio-container {
+		margin-top: 20px;
+	}
+
+
 </style>
