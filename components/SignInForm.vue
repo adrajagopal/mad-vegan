@@ -55,25 +55,23 @@
 
 <template>
 	<form @submit.prevent="submit()">
-		<div class="question">
-			<label for="email">Email</label>
-			<input
-				id="email"
-				type="email"
-				v-model="form.email"
-				autocomplete="off"
-			/>
-		</div>
+		<InputText
+			inputType="email"
+			name="email"
+			label="Email Address"
+			autcomplete="off"
+			stackDetails="column"
+			v-model="form.email"
+		/>
 
-		<div class="question">
-			<label for="password">Password</label>
-			<input
-				id="password"
-				type="password"
-				v-model="form.password"
-				autocomplete="off"
-			/>
-		</div>
+		<InputText
+			inputType="password"
+			name="password"
+			label="Password"
+			autcomplete="off"
+			stackDetails="column"
+			v-model="form.password"
+		/>
 
 		<Button
 			btnType="submit"
