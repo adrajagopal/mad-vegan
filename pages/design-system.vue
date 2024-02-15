@@ -38,6 +38,7 @@
 				label="Password"
 				autcomplete="off"
 				stackDetails="column"
+				helper="Passwords must be just long and complicated enough that you can't remember them"
 			/>
 		</section>
 		
