@@ -7,15 +7,18 @@
 		label: String, //used for: label element
 		autocomplete: String, //values: on, off
 		stackDetails: String, // direction: "column" or leave blank for row; order: "reverse" or leave blank for default
-		//next -- handle defineModel stuff
+		
+		//v-model -- put on the parent
 	});
+
+	const model = defineModel();
 
 </script>
 
 <template>
 	<div class="input-container" :class="stackDetails">
 		<label class="med-plus-voice" :for="name">{{label}}</label>
-		<input :required="required" :id="name" :type="inputType"/>
+		<input :required="required" :id="name" :type="inputType" v-model="model"/>
 	</div>
 </template>
 
