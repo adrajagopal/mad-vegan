@@ -2,10 +2,18 @@
 
 	const props = defineProps({
 		inputType: String, //values: email, number, text, pw
+
 		name: String, // used for: for, id, v-model
-		required: Boolean,
 		label: String, //used for: label element
+
+		required: Boolean,
 		autocomplete: String, //values: on, off
+
+		minlength: Number,
+		maxlength: Number,
+		pattern: String, //RegEx pattern
+
+		helper: String, //put in the helper text here if you have any
 		stackDetails: String, // direction: "column" or leave blank for row; order: "reverse" or leave blank for default
 		
 		//v-model -- put on the parent
@@ -16,9 +24,21 @@
 </script>
 
 <template>
-	<div class="input-container" :class="stackDetails">
-		<label class="med-plus-voice" :for="name">{{label}}</label>
-		<input :required="required" :id="name" :type="inputType" v-model="model"/>
+	<div class="input-container">
+		<div class="input" :class="stackDetails">
+			<label class="med-plus-voice" :for="name">{{label}}</label>
+			<input
+				:type="inputType"
+				:id="name"
+				:required="required"
+				:autocomplete="autocomplete"
+				:minlength="minlength"
+				:maxlength="maxlength"
+				:pattern="pattern"
+				v-model="model"
+			/>
+		</div>
+		<p v-if="helper" class="small-voice">{{helper}}</p>
 	</div>
 </template>
 
@@ -40,7 +60,7 @@
 		}
 	}
 
-	.input-container {
+	.input {
 		display: flex;
 		gap: 12px;
 
