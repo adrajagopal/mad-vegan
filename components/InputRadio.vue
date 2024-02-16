@@ -24,7 +24,7 @@
 					v-model="model"
 					:id="option.forId"
 					:value="option.value ?? option.forId"
-					:name="option.name"
+					:name="name"
 				/>{{option.label}}
 			</label>
 		</div>
