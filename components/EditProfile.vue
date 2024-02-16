@@ -10,7 +10,6 @@
 		.select(`user_id, handle, eats_meat, eats_dairy, diet_category, eats_eggs, avatar, likes_imitation_meat`)
 		.eq('user_id', id);
 
-
 	const form = reactive({
 		handle: data.handle ?? '',
 		eats_meat: data.eats_meat ?? '',
@@ -43,6 +42,26 @@
 			.eq('user_id', id)
 	}
 
+
+	const dietQuestion = {
+		title: "What best describes your diet? We'll get more specific next.",
+		name: "diet_category",
+		options: [
+			{
+				forId: "vegan",
+				label: "Vegan"
+			},
+			{
+				forId: "vegetarian",
+				label: "Vegetarian"
+			},
+			{
+				forId: "other_diet",
+				label: "Other"
+			}
+		]
+	};
+
 </script>
 
 <template>
@@ -68,44 +87,12 @@
 		/>
 
 		<div class="question">
-			<p class="med-plus-voice">What best describes your diet? We'll get more specific next.</p>
-			<div class="option">
-				<label for="vegan">
-					<input
-						id="vegan"
-						type="radio"
-						value="vegan"
-						name="diet_category"
-						v-model="form.diet_category"
-					/>Vegan
-				</label>
-			</div>
-
-
-			<div class="option">
-				<label for="vegetarian">
-					<input
-						id="vegetarian"
-						type="radio"
-						value="vegetarian"
-						name="diet_category"
-						v-model="form.diet_category"
-					/>Vegetarian
-				</label>
-			</div>
-
-			<div class="option">
-				<label for="other">
-					<input
-						id="other"
-						type="radio"
-						value="other"
-						name="diet_category"
-						v-model="form.diet_category"
-					/>Other
-					<input type="text" id="other_text">
-				</label>
-			</div>
+			<InputRadio
+				:title="dietQuestion.title"
+				:name="dietQuestion.name"
+				:options="dietQuestion.options"
+				v-model="form.diet_category"
+			/>
 		</div>
 	</section>
 
