@@ -4,7 +4,7 @@
 </script>
 
 <template>
-	<p class="small-voice">Sup, {{user.email}}?</p>
+	<NuxtLink to="/profile" class="small-voice">{{user.email}}</NuxtLink>
 </template>
 
 <style scoped></style>
