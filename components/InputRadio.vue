@@ -16,14 +16,14 @@
 
 <template>
 	<div class="radio-container">
-		<h3 class="large-voice">{{title}}</h3>
+		<h3 class="large-voice">{{title}} {{model}} + {{name}}</h3>
 		<div class="radio-options">
 			<label :for="option.forId" v-for="option in props.options">
 				<input
 					type="radio"
 					v-model="model"
-					:id="option.forId"
 					:value="option.value ?? option.forId"
+					:id="option.forId"
 					:name="name"
 				/>{{option.label}}
 			</label>
