@@ -2,6 +2,7 @@ export const useProfileStore = defineStore('profile', () => {
 	const user = useUserStore();
 	const id = user.id;
 
+	//this functionality needs to be wrapped in a fn
 	// const supabase = useSupabaseClient()
 
 	// const { data, error } = await supabase
