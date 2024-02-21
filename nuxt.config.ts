@@ -3,19 +3,14 @@ import {fileURLToPath} from 'url';
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-	modules: [
-    ['@nuxtjs/google-fonts', {
+	modules: [['@nuxtjs/google-fonts', {
         families: {
          'Inter': {
             wght: [100, 300, 400, 500, 600, 700],
             ital: '300..500',
           }
         }
-    }],
-    'nuxt3-leaflet',
-    '@nuxtjs/supabase',
-    '@pinia/nuxt',
-	],
+    }], 'nuxt3-leaflet', '@nuxtjs/supabase', '@pinia/nuxt', "@nuxt/image"],
 	css: ['~/assets/css/site.css'],
 	vue: {
 	   compilerOptions: {
