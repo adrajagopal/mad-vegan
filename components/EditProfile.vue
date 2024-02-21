@@ -17,14 +17,14 @@
 
 	async function submit() {
 
-		if (!form.handle || !form.diet_category || !form.eats_meat || !form.eats_dairy || !form.eats_eggs || !form.likes_imitation_meat /*|| !form.avatar*/) {
-			form.errorMessage = 'Please fill out all profile fields.';
-			return;
-		}
+		// if (!form.handle || !form.diet_category || !form.eats_meat || !form.eats_dairy || !form.eats_eggs || !form.likes_imitation_meat || !form.avatar) {
+		// 	form.errorMessage = 'Please fill out all profile fields.';
+		// 	return;
+		// }
 
 		const { error } = await supabase
 			.from('profiles')
-			.update({
+			.update({ // make it so that you can just pass in the whole form obj
 				handle: form.handle,
 				eats_meat: form.eats_meat,
 				eats_dairy: form.eats_dairy,
