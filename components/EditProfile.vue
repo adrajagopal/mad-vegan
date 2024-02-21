@@ -163,105 +163,14 @@
 
 	<section>
 		<h2 class="xl-voice">Diet Details</h2>
-		<div class="question">
-			<p class="med-plus-voice">Do you eat meat?</p>
-			<div class="option">
-				<input
-					id="meat_1"
-					type="radio"
-					value="1"
-					v-model="form.eats_meat"
-					name="eats_meat"
-				/>
-				<label for="meat_1">Yes</label>
-			</div>
-			<div class="option">
-				<input
-					id="meat_0"
-					type="radio"
-					value="0"
-					v-model="form.eats_meat"
-					name="eats_meat"
-				/>
-				<label for="meat_0">No</label>
-			</div>
-		</div>
-
-		<div class="question">
-			<p class="med-plus-voice">Do you eat dairy?</p>
-			<div class="option">
-				<input
-					id="dairy_1"
-					type="radio"
-					value="1"
-					name="eats_dairy"
-					v-model="form.eats_dairy"
-				/>
-				<label for="dairy_1">Yes</label>
-			</div>
-			<div class="option">
-				<input
-					id="dairy_0"
-					type="radio"
-					value="0"
-					name="eats_dairy"
-					v-model="form.eats_dairy"
-				/>
-				<label for="dairy_0">No</label>
-			</div>
-		</div>
-
-		<div class="question">
-			<p class="med-plus-voice">Do you eat eggs?</p>
-			<div class="option">
-				<input
-					id="eggs_1"
-					type="radio"
-					value="1"
-					name="eats_eggs"
-					v-model="form.eats_eggs"
-				/>
-				<label for="eggs_1">Yes</label>
-			</div>
-			<div class="option">
-				<input
-					id="eggs_0"
-					type="radio"
-					value="0"
-					name="eats_eggs"
-					v-model="form.eats_eggs"
-				/>
-				<label for="eggs_0">No</label>
-			</div>
-		</div>
-
-		<div class="question">
-			<p class="med-plus-voice">Do you like imitation meats, or would you rather just have your vegan proteins as they are?</p>
-			<div class="option">
-				<input
-					id="imitation_meat_1"
-					type="radio"
-					value="1"
-					name="likes_imitation_meat"
-					v-model="form.likes_imitation_meat"
-				/>
-				<label for="imitation_meat_1">Yep. Bring on the chik'n and Beyond burgers</label>
-			</div>
-			<div class="option">
-				<input
-					id="imitation_meat_0"
-					type="radio"
-					value="0"
-					name="likes_imitation_meat"
-					v-model="form.likes_imitation_meat"
-				/>
-				<label for="imitation_meat_0">Nope. Just be beans and tofu</label>
-			</div>
-		</div>
+		<InputRadio
+			v-for="question in dietBinaryQuestions"
+			:title="question.title"
+			:name="question.name"
+			:options="question.options"
+			v-model="form[question.name]"
+		/>
 	</section>
-	
-
-	
 
 	<Button
 		btnType="submit"
