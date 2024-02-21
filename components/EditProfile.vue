@@ -133,7 +133,9 @@
 	<section>
 		<h2 class="xl-voice">Your identity</h2>
 		<div class="question">
-			<!-- <InputProfilePic/> -->
+			<InputProfilePic
+				v-model="form.avatar"
+			/>
 		</div>
 
 		<InputText
