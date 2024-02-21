@@ -77,6 +77,8 @@
 				:required="false"
 				label="Short Text"
 				stackDetails="row"
+				defaultVal="hi there"
+
 			/>
 
 			<InputText
