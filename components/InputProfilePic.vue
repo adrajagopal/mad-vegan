@@ -1,50 +1,52 @@
-<script setup></script>
+<script setup>
+
+	const avatars = [
+		{
+			forId: "default-avatar",
+			src: "default-avatar.jpg",
+			imgAlt: "pink-green gradient",
+			checked: true
+		},
+		{
+			forId: "tofu",
+			src: "tofu.jpg",
+			imgAlt: "a gaggle of fried tofu on a plate",
+			checked: false
+		},
+		{
+			forId: "cilantro",
+			src: "cilantro.jpg",
+			imgAlt: "a carefree bunch of cilantro, floating in the air",
+			checked: false
+		}
+	];
+
+	// const props = reactive({
+
+	// });
+	
+	const model = defineModel();
+
+</script>
 
 <template>
 	<h3 class="med-plus-voice">Choose an avatar</h3>
 	<div class="photo-container">
-		<div class="option photo">
-			<label for="default-avatar">
+		<div class="option photo" v-for="avatar in avatars">
+			<label :for="avatar.forId">
 				<picture>
-					<img src="@/assets/default-avatar.jpg" alt="orange green gradient">
+					<NuxtImg
+						:src="avatar.src"
+						:alt="avatar.imgAlt"
+					/>
 				</picture>
 				<input
-					id="default-avatar"
+					:id="avatar.forId"
 					type="radio"
-					value="default-avatar"
-					v-model="form.avatar"
+					:value="avatar.forId"
+					v-model="model"
 					name="avatar"
-					checked
-				/>
-			</label>
-		</div>
-		
-		<div class="option photo">
-			<label for="tofu">
-				<picture>
-					<img src="@/assets/tofu.jpg" alt="a gaggle of tofu">
-				</picture>
-				<input
-					id="tofu"
-					type="radio"
-					value="tofu"
-					name="avatar"
-					v-model="form.avatar"
-				/>
-			</label>
-		</div>
-		
-		<div class="option photo">
-			<label for="cilantro">
-				<picture>
-					<img src="@/assets/cilantro.jpg" alt="a bunch of cilantro">
-				</picture>
-				<input
-					id="cilantro"
-					type="radio"
-					value="cilantro"
-					name="avatar"
-					v-model="form.avatar"
+					:checked="avatar.checked"
 				/>
 			</label>
 		</div>
