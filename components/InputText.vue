@@ -2,6 +2,7 @@
 
 	const props = defineProps({
 		inputType: String, //values: email, number, text, pw
+		defaultVal: String, // in case it comes from database
 
 		forId: String, // used for: for, id
 		label: String, //used for: label element
@@ -36,7 +37,8 @@
 				:maxlength="maxlength"
 				:pattern="pattern"
 				v-model="model"
-			/>
+			/> 
+			<!-- THIS IS TO PASS INTO THE INPUT: :value="defaultVal ?? ''"  -->
 		</div>
 		<p v-if="helper" class="small-voice">{{helper}}</p>
 	</div>
