@@ -56,6 +56,73 @@
 		]
 	};
 
+	const dietBinaryQuestions = [
+		{
+			title: "Do you eat meat?",
+			name: "eats_meat",
+			options: [
+				{
+					forId: "meat_1",
+					value: "true",
+					label: "Yes"
+				},
+				{
+					forId: "meat_0",
+					value: "false",
+					label: "No"
+				}
+			]
+		},
+		{
+			title: "Do you eat dairy?",
+			name: "eats_dairy",
+			options: [
+				{
+					forId: "dairy_1",
+					value: "true",
+					label: "Yes"
+				},
+				{
+					forId: "dairy_0",
+					value: "false",
+					label: "No"
+				}
+			]
+		},
+		{
+			title: "Do you eat eggs?",
+			name: "eats_eggs",
+			options: [
+				{
+					forId: "eggs_1",
+					value: "true",
+					label: "Yes"
+				},
+				{
+					forId: "eggs_0",
+					value: "false",
+					label: "No"
+				}
+			]
+		},
+		{
+			title: "Do you like imitation meats, or would you rather just have your vegan proteins as they are?",
+			name: "likes_imitation_meat",
+			options: [
+				{
+					forId: "imitation_meat_1",
+					value: "true",
+					label: "Yep. Bring on the chik'n and Beyond burgers"
+				},
+				{
+					forId: "imitation_meat_0",
+					value: "false",
+					label: "Nope. Just be beans and tofu"
+				}
+			]
+		}
+	];
+
 </script>
 
 <template>
