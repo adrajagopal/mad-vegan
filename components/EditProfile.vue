@@ -128,6 +128,8 @@
 <template>
 
 <form @submit.prevent="submit()">
+	<pre>{{data}}</pre>
+	<pre>{{form}}</pre>
 	<section>
 		<h2 class="xl-voice">Your identity</h2>
 		<div class="question">
