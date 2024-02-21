@@ -11,13 +11,7 @@
 		.eq('user_id', id);
 
 	const form = reactive({
-		handle: data.handle ?? '',
-		eats_meat: data.eats_meat ?? '',
-		eats_dairy: data.eats_dairy ?? '',
-		diet_category: data.diet_category ?? '',
-		eats_eggs: data.eats_eggs ?? '',
-		avatar: data.avatar ?? '',
-		likes_imitation_meat: data.likes_imitation_meat ?? '',
+		...data[0],
 		errorMessage: null,
 	});
 
