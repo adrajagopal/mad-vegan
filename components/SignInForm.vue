@@ -6,20 +6,34 @@
 	const form = reactive({
 	 email: '',
 	 password: '',
-	 successMessage: '',
 	 errorMessage: '',
+	 isLoading: false,
+	 success: false
 	});
+
+	const getBtnState = computed(() => {
+		return form.isLoading ? "loading" : "default"
+	});
+
+	function resetFeedback() {
+		form.errorMessage = '';
+		form.success = false;
+	}
 
 	async function signIn() {
 		form.successMessage = '';
 		form.errorMessage = '';
 
+		form.isLoading = true;
+		await delay(1500);
+
 		const { data, error } = await supabase.auth.signInWithPassword({
-		  email: form.email,
-		  password: form.password,
+			email: form.email,
+			password: form.password,
 		});
 
 		if (error) {
+			form.isLoading = false;
 			switch(error.toString()) {
 				case 'AuthApiError: Invalid login credentials':
 					form.errorMessage = "The email or password you entered was invalid.";
@@ -35,17 +49,18 @@
 			return form.errorMessage;
 		}
 
-		form.successMessage = "Logging you in now!";
+		form.success = true;
+		form.isLoading = false;
 	}
 
 	async function submit() {
 		if (form.email && form.password) {
 			await signIn();
 
-			if (form.successMessage) {
+			if (form.success) {
 				loader.toggleFullPageLoader();
 
-				await delay(3000);
+				await delay(2000);
 				await navigateTo('/');
 			}
 		}
@@ -77,6 +92,7 @@
 			btnType="submit"
 			copy="Sign In"
 			class="fill color"
+			:state="getBtnState"
 		/>
 	</form>
 
