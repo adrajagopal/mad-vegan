@@ -68,7 +68,7 @@ function add() {
 		<Button
 			btnType="submit"
 			copy="Add Restaurant"
-			styleClass="fill paper"
+			class="fill paper"
 		/>
 	</form>
 </template>

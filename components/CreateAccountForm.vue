@@ -35,6 +35,8 @@
 </script>
 
 <template>
+	{{form}}
+
 	<form @submit.prevent="submit()">
 		<InputText
 			inputType="email"
@@ -57,7 +59,7 @@
 		<Button
 			btnType="submit"
 			copy="Create Account"
-			styleClass="fill color"
+			class="fill color"
 		/>
 	</form>
 

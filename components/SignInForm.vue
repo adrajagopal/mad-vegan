@@ -76,7 +76,7 @@
 		<Button
 			btnType="submit"
 			copy="Sign In"
-			styleClass="fill color"
+			class="fill color"
 		/>
 	</form>
 

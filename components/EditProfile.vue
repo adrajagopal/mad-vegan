@@ -175,7 +175,7 @@
 	<Button
 		btnType="submit"
 		copy="Save Profile"
-		styleClass="fill paper"
+		class="fill paper"
 	/>
 </form>
 
