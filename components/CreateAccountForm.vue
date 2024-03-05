@@ -24,7 +24,7 @@
         password: form.password,
       });
       if (error) {
-        console.log('signUpWithEmail', error);
+        console.error('signUpWithEmail Error:', error);
         form.errorMessage = error.message;
       } 
       form.successMessage = `Check your email and confirm you're real`;
