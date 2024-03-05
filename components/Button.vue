@@ -5,8 +5,13 @@
 		btnType: String,
 		isLink: Boolean,
 		linkHref: String,
-		linkTarget: String
+		linkTarget: String,
+		state: String //options: default, loading, success
 	});
+
+	const btnDisabled = computed(() => {
+		return props.state === "loading" ? true : false;
+	})
 
 	/* 
 		style should be defined on the component parent -- <Button /> -- like a normal CSS class
@@ -32,8 +37,11 @@
 	<button
 		v-else
 		type="btnType"
+		:class="state"
+		:disabled="btnDisabled"
 	>
 		{{copy}}
+		<div v-if="state==='loading'" class="loader"></div>
 	</button>
 
 </template>
@@ -70,7 +78,7 @@
 			&.color {
 				background-color: var(--color);
 
-				&:hover {
+				&:not(.loading)&:hover {
 					background-color: var(--color-light);
 				}
 			}
@@ -78,7 +86,7 @@
 			&.paper {
 				background-color: var(--paper-accent);
 
-				&:hover {
+				&:not(.loading)&:hover {
 					background-color: var(--paper);
 				}
 			}
@@ -98,7 +106,7 @@
 
 		}
 
-		&:active {
+		&:not(.loading)&:active {
 			filter: brightness(50%);
 		}
 
@@ -109,6 +117,28 @@
 				background-color: var(--warning-dark);
 			}
 		}
+
+		&.loading {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 12px;
+			cursor: auto;
+			filter: grayscale(50%);
+
+			& .loader {
+				border: 5px double var(--ink);
+				border-radius: 25%;
+				width: 1.1rem;
+				height: 1.1rem;
+				animation: spin 1s linear infinite;
+			}
+		}
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
 	}
 
 </style>
