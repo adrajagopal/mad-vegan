@@ -1,14 +1,16 @@
 <script setup>
 	const user = useUserStore();
-
-	const id = user.id;
+	const profile = useProfileStore();
 
 	const supabase = useSupabaseClient()
+
+	const profileData = await profile.getUserProfile();
+	console.log(profileData);
 
 	const { data, error } = await supabase
 		.from('profiles')
 		.select(`user_id, handle, eats_meat, eats_dairy, diet_category, eats_eggs, avatar, likes_imitation_meat`)
-		.eq('user_id', id);
+		.eq('user_id', user.id);
 
 	const form = reactive({
 		...data[0],
@@ -128,6 +130,7 @@
 <template>
 
 <form @submit.prevent="submit()">
+	{{profileData}}
 	<pre>{{data}}</pre>
 	<pre>{{form}}</pre>
 	<section>

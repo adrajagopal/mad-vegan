@@ -1,19 +1,27 @@
 export const useProfileStore = defineStore('profile', () => {
 	const user = useUserStore();
-	const id = user.id;
 
 	//this functionality needs to be wrapped in a fn
-	// const supabase = useSupabaseClient()
+	const supabase = useSupabaseClient()
 
-	// const { data, error } = await supabase
-	// 	.from('profiles')
-	// 	.select(`user_id, handle, eats_meat, eats_dairy, diet_category, eats_eggs, avatar, likes_imitation_meat`)
-	// 	.eq('user_id', id);
+	async function getUserProfile() {
+		const response = await supabase
+			.from('profiles')
+			.select(`user_id, handle, avatar, eats_meat, eats_dairy, diet_category, eats_eggs, likes_imitation_meat`)
+			.eq('user_id', user.id)
+			.single();
 
-	// const avatar = ref(data.avatar);
+
+		console.log("response", response);
+		return response;
+		// console.log("error: " + error);
+		// return error ? error : data;
+	}
+
+
 
 	return {
-		// avatar
+		getUserProfile
 	}
 
 })

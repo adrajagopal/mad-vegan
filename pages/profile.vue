@@ -6,8 +6,10 @@
 	<inner-column>
 		<h1 class="xxl-voice">Profile</h1>
 
-		<ViewProfile/>
-		<EditProfile/>
+		<!-- <ViewProfile/> -->
+		<ClientOnly>
+			<EditProfile/>
+		</ClientOnly>
 
 	</inner-column>
 </template>
