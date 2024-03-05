@@ -113,6 +113,16 @@
 				class="fill paper"
 			/>
 			<Button
+				copy="Submit"
+				class="fill color"
+				state="loading"
+			/>
+			<Button
+				copy="Create Account"
+				class="fill paper"
+				state="loading"
+			/>
+			<Button
 				copy="Visit page"
 				:isLink="true"
 				linkHref="https://adrajagopal.com"
