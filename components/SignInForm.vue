@@ -77,6 +77,7 @@
 			autcomplete="off"
 			stackDetails="column"
 			v-model="form.email"
+			@input="resetFeedback()"
 		/>
 
 		<InputText
@@ -86,6 +87,7 @@
 			autcomplete="off"
 			stackDetails="column"
 			v-model="form.password"
+			@input="resetFeedback()"
 		/>
 
 		<Button
