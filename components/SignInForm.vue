@@ -90,10 +90,6 @@
 			@input="resetFeedback()"
 		/>
 
-		<FancyButton>
-			Fancier version...
-		</FancyButton>
-
 		<Button
 			btnType="submit"
 			copy="Sign In"

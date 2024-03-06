@@ -73,54 +73,17 @@
 		padding: 8px; /* should probably be em */
 		border-radius: var(--corners);
 
-		/* outline */
-		--fill: red;
-		--ink: black;
-		--hover-fill: green;
-		--hover-ink: red;
-
-		/* setup */
-		background-color: var(--fill);
-		color: var(--ink);
-		&:hover {
-			background-color: var(--hover-fill);
-			color: var(--hover-ink);
-		}
-
-		/* variants */
-		&.color {
-			/* actually using the "custom properties */
-			--fill: var(--color);
-			--hover-fill: var(--color-dark);
-		}
-
-		&.transparent {
-			/* undo / override some things... */
-		}
-
-		/* states */
-		&.loading {
-
-		}
-
-
-
 		/* fallback if no props */
 		background-color: var(--color);
 		color: var(--paper);
 		border: var(--border);
 
-
-
-
-
 		/* variants */
-		&.fill { /* should fill just be the default??? - most common button / no need for a class? */
+		&.fill { /* should fill just be the default??? */
 			color: var(--ink);
 			border-color: var(--ink);
 
 			&.color {
-				--fill: green;
 				background-color: var(--color);
 
 				&:not(.loading):hover {
