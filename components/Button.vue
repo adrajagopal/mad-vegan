@@ -11,6 +11,7 @@
 
 	const btnDisabled = computed(() => {
 		return props.state === "loading" ? true : false;
+		//this might be better as a watch method
 	})
 
 	/* 
@@ -78,7 +79,7 @@
 			&.color {
 				background-color: var(--color);
 
-				&:not(.loading)&:hover {
+				&:not(.loading):hover {
 					background-color: var(--color-light);
 				}
 			}
@@ -86,7 +87,7 @@
 			&.paper {
 				background-color: var(--paper-accent);
 
-				&:not(.loading)&:hover {
+				&:not(.loading):hover {
 					background-color: var(--paper);
 				}
 			}
@@ -106,7 +107,7 @@
 
 		}
 
-		&:not(.loading)&:active {
+		&:not(.loading):active {
 			filter: brightness(50%);
 		}
 
