@@ -96,6 +96,8 @@
 			class="fill color"
 			:state="getBtnState"
 		/>
+<!--      Sign In!  note--- you could use a slot here
+	   </Button> -->
 	</form>
 
 	<p class="success" v-if="form.successMessage">

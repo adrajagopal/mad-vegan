@@ -14,6 +14,8 @@
 		//this might be better as a watch method
 	})
 
+	// this might be a good area to think about "watch" to see when the state changes and run gsap functions to start and stop animations
+
 	/* 
 		style should be defined on the component parent -- <Button /> -- like a normal CSS class
 		options are:
@@ -41,13 +43,18 @@
 		:class="state"
 		:disabled="btnDisabled"
 	>
-		{{copy}}
-		<div v-if="state==='loading'" class="loader"></div>
+		<!-- can't use flexbox on buttons (I don't think / officially) / but you can put a child div and put flex on that - (if you need to layout content in here) -->
+		<!-- <div class="position"></div> -->
+
+		{{copy}} <!-- probably put this in a span or div or something -->
+		<div v-if="state === 'loading'" class="loader"></div>
 	</button>
 
 </template>
 
 <style scoped>
+
+	/*	size */
 	button {
 		min-width: 180px;
 	}
@@ -59,12 +66,12 @@
 	button, .button {
 		cursor: pointer;
 		justify-self: start; /* since i make buttons display: block, this prevents it from spanning full width of parent*/
-		font-size: 16px;
+		font-size: 16px; /* should be 1rem */
 		font-weight: 600;
 		text-wrap: nowrap;
 		text-align: center;
 		text-decoration: none;
-		padding: 8px;
+		padding: 8px; /* should probably be em */
 		border-radius: var(--corners);
 
 		/* fallback if no props */
@@ -72,7 +79,8 @@
 		color: var(--paper);
 		border: var(--border);
 
-		&.fill {
+		/* variants */
+		&.fill { /* should fill just be the default??? */
 			color: var(--ink);
 			border-color: var(--ink);
 
