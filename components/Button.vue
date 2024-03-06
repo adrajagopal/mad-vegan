@@ -13,6 +13,8 @@
 		return props.state === "loading" ? true : false;
 	})
 
+	// this might be a good area to think about "watch" to see when the state changes and run gsap functions to start and stop animations
+
 	/* 
 		style should be defined on the component parent -- <Button /> -- like a normal CSS class
 		options are:
@@ -40,13 +42,18 @@
 		:class="state"
 		:disabled="btnDisabled"
 	>
-		{{copy}}
-		<div v-if="state==='loading'" class="loader"></div>
+		<!-- can't use flexbox on buttons (I don't think / officially) / but you can put a child div and put flex on that - (if you need to layout content in here) -->
+		<!-- <div class="position"></div> -->
+
+		{{copy}} <!-- probably put this in a span or div or something -->
+		<div v-if="state === 'loading'" class="loader"></div>
 	</button>
 
 </template>
 
 <style scoped>
+
+	/*	size */
 	button {
 		min-width: 180px;
 	}
@@ -58,27 +65,65 @@
 	button, .button {
 		cursor: pointer;
 		justify-self: start; /* since i make buttons display: block, this prevents it from spanning full width of parent*/
-		font-size: 16px;
+		font-size: 16px; /* should be 1rem */
 		font-weight: 600;
 		text-wrap: nowrap;
 		text-align: center;
 		text-decoration: none;
-		padding: 8px;
+		padding: 8px; /* should probably be em */
 		border-radius: var(--corners);
+
+		/* outline */
+		--fill: red;
+		--ink: black;
+		--hover-fill: green;
+		--hover-ink: red;
+
+		/* setup */
+		background-color: var(--fill);
+		color: var(--ink);
+		&:hover {
+			background-color: var(--hover-fill);
+			color: var(--hover-ink);
+		}
+
+		/* variants */
+		&.color {
+			/* actually using the "custom properties */
+			--fill: var(--color);
+			--hover-fill: var(--color-dark);
+		}
+
+		&.transparent {
+			/* undo / override some things... */
+		}
+
+		/* states */
+		&.loading {
+
+		}
+
+
 
 		/* fallback if no props */
 		background-color: var(--color);
 		color: var(--paper);
 		border: var(--border);
 
-		&.fill {
+
+
+
+
+		/* variants */
+		&.fill { /* should fill just be the default??? - most common button / no need for a class? */
 			color: var(--ink);
 			border-color: var(--ink);
 
 			&.color {
+				--fill: green;
 				background-color: var(--color);
 
-				&:not(.loading)&:hover {
+				&:not(.loading):hover {
 					background-color: var(--color-light);
 				}
 			}
@@ -86,7 +131,7 @@
 			&.paper {
 				background-color: var(--paper-accent);
 
-				&:not(.loading)&:hover {
+				&:not(.loading):hover {
 					background-color: var(--paper);
 				}
 			}
@@ -106,7 +151,7 @@
 
 		}
 
-		&:not(.loading)&:active {
+		&:not(.loading):active {
 			filter: brightness(50%);
 		}
 
